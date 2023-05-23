@@ -1,7 +1,7 @@
 name: CI PL
 on:
   push:
-    branches: ["main"]  
+   branches: ["main"]  
 jobs:
   build:
      name: Build PL
