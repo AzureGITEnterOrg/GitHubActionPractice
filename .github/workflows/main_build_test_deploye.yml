@@ -4,21 +4,24 @@ on:
     branches: ["main"]  
 jobs:
   build:
-    runs-on: ubuntu-latest    
-    steps:
-    - uses: actions/checkout@v3    
-    - name: build code
-      run: echo code will get build
+     name: Build PL
+     runs-on: ubuntu-latest    
+     steps:
+     - uses: actions/checkout@v3    
+     - name: build code
+       run: echo code will get build
   test:
+    name: testjob
     runs-on: ubuntu-latest    
     steps:
     - uses: actions/checkout@v3    
     - name: test code
       run: echo test code throughly
   deploy:
-    runs-on: ubuntu-latest    
-    steps:
-    - uses: actions/checkout@v3    
-    - name: deploy code
-      run: echo deploy code to GCP
+      name: deploy job
+      runs-on: ubuntu-latest    
+      steps:
+      - uses: actions/checkout@v3    
+      - name: deploy code
+        run: echo deploy code to GCP
     
