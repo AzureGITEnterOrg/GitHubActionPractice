@@ -1,0 +1,24 @@
+name: CI PL
+on:
+  push:
+    branches: ["main"]  
+jobs:
+  build:
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@v3    
+    - name: build code
+      run: echo code will get build
+  test:
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@v3    
+    - name: test code
+      run: echo test code throughly
+  deploy:
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@v3    
+    - name: deploy code
+      run: echo deploy code to GCP
+    
