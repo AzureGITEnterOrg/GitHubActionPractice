@@ -2,17 +2,11 @@ name: CI
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
-  
+  workflow_dispatch:  
 jobs:
   build:
-    runs_on: ubuntu-latest
-    
+    runs-on: ubuntu-latest    
     steps:
-     - uses: actions/checkout@v3
-     
-     - name: greet user
-       run: echo welcome to myworld
-  
-
-  
+    - uses: actions/checkout@v3    
+    - name: Greet User
+      run: echo welcome to IBM
